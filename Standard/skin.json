@@ -1,0 +1,62 @@
+{
+	"name": "Standard",
+	"version": "1.0",
+	"author": "Mike9012",
+	"url": "https://github.com/TheNintendofan1209/Standard-Mediawiki",
+	"descriptionmsg": "standard-desc",
+	"namemsg": "skinname-standard",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"ValidSkinNames": {
+		"standard": "Standard"
+	},
+	"MessagesDirs": {
+		"Standard": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.standard": {
+			"class": "ResourceLoaderSkinModule",
+			"styles": {
+				"resources/libraries/normalise.css": {
+					"media": "screen"
+				},
+				"resources/screen-common.less": {
+					"media": "screen"
+				},
+				"resources/screen-desktop.less": {
+					"media": "screen and (min-width: 751px)"
+				},
+				"resources/screen-mobile.less": {
+					"media": "screen and (max-width: 750px)"
+				},
+				"resources/print.css": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.standard.js": {
+			"scripts": [
+				"resources/main.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Standard"
+	},
+	"ResourceModuleSkinStyles": {
+		"standard": {
+			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
+		}
+	},
+	"AutoloadClasses": {
+		"SkinStandard": "includes/SkinStandard.php",
+		"StandardTemplate": "includes/StandardTemplate.php"
+	},
+	"manifest_version": 1
+}
